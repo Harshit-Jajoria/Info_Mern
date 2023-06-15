@@ -8,8 +8,6 @@ const Edit = () => {
     name: '',
     email: '',
     age: '',
-
-    
   });
   useEffect(() => {
     const getAllData = async () => {
@@ -20,8 +18,6 @@ const Edit = () => {
     };
     getAllData();
   }, [id]);
-
-
 
   const handleEditData = async (e) => {
     e.preventDefault();
