@@ -19,6 +19,8 @@ const Edit = () => {
     getAllData();
   }, [id]);
 
+  
+
   const handleEditData = async (e) => {
     e.preventDefault();
     await axios.put(`http://localhost:5000/api/v1/users/${id}`, inputData);
