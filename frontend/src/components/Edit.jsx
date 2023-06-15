@@ -14,7 +14,7 @@ const Edit = () => {
       const res = await axios.get(
         `http://localhost:5000/api/v1/users/single/${id}`
       );
-      setInputData(res.data);
+      setInputData(res.data);   
     };
     getAllData();
   }, [id]);
