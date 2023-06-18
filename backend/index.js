@@ -5,7 +5,7 @@ import userRoutes from './routes/user.js';
 
 const app = express();
 const port = process.env.PORT || 5000;
-connectToMongo();
+connectToMongo();    
 
 // apply middleware for posting the data
 app.use(express.json());
