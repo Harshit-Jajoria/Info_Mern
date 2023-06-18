@@ -5,9 +5,9 @@ const Edit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [inputData, setInputData] = useState({
-    name: 'Harshit',
+    name: '',
     email: '',
-    age: '20',              
+    age: '',              
   });
   useEffect(() => {
     const getAllData = async () => {
