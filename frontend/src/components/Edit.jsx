@@ -7,7 +7,7 @@ const Edit = () => {
   const [inputData, setInputData] = useState({
     name: '',
     email: '',
-    age: '',              
+    age: '  ',              
   });
   useEffect(() => {
     const getAllData = async () => {
