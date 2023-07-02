@@ -4,7 +4,7 @@ import axios from 'axios';
 const Edit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [inputData, setInputData] = useState ({
+  const [inputData, setInput Data] = useState ({
     name: '',
     email: '',
     age: '',              
