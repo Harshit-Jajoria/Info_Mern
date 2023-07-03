@@ -6,7 +6,7 @@ const Edit = () => {
   const navigate = useNavigate();
   const [inputData, setInputData] = useState ({
     name: 'h',
-    email: 'a',
+    email: '',
     age: '',              
   });
   useEffect(() => {
