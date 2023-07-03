@@ -5,7 +5,7 @@ const Edit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [inputData, setInputData] = useState ({
-    name: 'h',
+    name: '',
     email: '',
     age: '',              
   });
