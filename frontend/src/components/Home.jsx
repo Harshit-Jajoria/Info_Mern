@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { api } from '../constant';
 
 const Home = () => {
+  
   const [users, setUsers] = useState([]); // this state is to get all of the users
   const [render, setRender] = useState(false); // this state is used to render the state only when its gets change and we have not to reload the page again and again
   const [inputData, SetInputData] = useState({
@@ -15,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await axios.get('http://localhost:5000/api/v1/users');
+      const res = await axios.get(`${api}/api/v1/users`);
       setUsers(res.data);
     };
     getData();
@@ -29,7 +31,7 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:5000/api/v1/users', inputData);
+    await axios.post(`${api}/api/v1/users`, inputData);
     setRender(true);
     SetInputData({
       name: '',
@@ -38,7 +40,7 @@ const Home = () => {
     });
   };
   const handelDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/v1/users/${id}`);
+    await axios.delete(`${api}/api/v1/users/${id}`);
     const newUsers = users.filter((item) => {
       return item._id !== id;
     });

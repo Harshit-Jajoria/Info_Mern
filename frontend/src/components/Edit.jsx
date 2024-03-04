@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { api } from '../constant';
 const Edit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Edit = () => {
   useEffect(() => {
     const getAllData = async () => {
       const res = await axios.get(
-        `http://localhost:5000/api/v1/users/single/${id}`
+        `${api}/api/v1/users/single/${id}`
       );  
       setInputData(res.data);   
     };
@@ -21,7 +22,7 @@ const Edit = () => {
 
   const handleEditData = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/api/v1/users/${id}`, inputData);
+    await axios.put(`${api}/api/v1/users/${id}`, inputData);
     navigate('/');
   };
   return (
