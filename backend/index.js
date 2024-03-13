@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send(`Hello from backend index.js and port number ${port} hello 2`);
+  res.send(`Hello from backend index.js and port number ${port} hello 3 auto`);
 });
 
 //routes
