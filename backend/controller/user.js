@@ -6,7 +6,7 @@ class userController {
       const allUsers = await userModel.find({});
       if (allUsers) {
         console.log('Get Request -- All Users');
-        return res.status(200).json(allUsers);
+        return res.status(200).json(allUser);
       }
     } catch (error) {
       return res.status(200).json(error);
