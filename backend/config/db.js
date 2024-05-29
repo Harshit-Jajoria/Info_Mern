@@ -7,7 +7,7 @@ const connectToMongo = async () => {
     const res = await mongoose.connect(
       'mongodb+srv://comder6674:NoKQzoRl8RRbmne8@infomern.tupvetp.mongodb.net/'
     );
-    //const res = await mongoose.connect('mongodb://localhost:27017/crud-app');
+    //const res = await mongoose.connect('mongodb://localhost:27017/c-app');
 
     if (res) console.log('connected to mongodb');
   } catch (error) {
