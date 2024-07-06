@@ -2,7 +2,7 @@ import express from 'express';
 import userController from '../controller/user.js';
 const router = express.Router();
 
-// All user Routers
+// All user Routerss
 
 router.get('/users', userController.getAllUsers);
 router.post('/users', userController.createUser);
